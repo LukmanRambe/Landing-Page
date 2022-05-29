@@ -7,17 +7,17 @@
 
         <section id="signup-form">
 
-            <div class="container justify-content-center col-12">
-                <a href="index.php#hero"><img src="./assets/images/image.png" alt="Brand Logo" class="signup-image"></a>
+            <div class="container col-12 text-center">
+                <a href="index.php#hero"><img src="./assets/images/logowf.png" alt="Website Factory Logo" class="signup-image"></a>
             </div>
 
-            <h1 class="text-center form-header mt-3 mb-4">Create Your Account</h1>
+            <h3 class="text-center form-header">Create Your Account</h3>
             <div id="signup-card" class="container col-md-12">
-                <div class="card">
+                <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title text-center">Sign Up</h5>
                         <?php
-                        
+
                         if (isset($_GET['error'])) {
                             if ($_GET['error'] == "emptyfields") {
                                 echo '<div class="container justify-content-center">
@@ -49,27 +49,22 @@
                                      </div>';
                             }
                         }
-                        
+
                         ?>
                         <div class="form-group">
-                            <form action="../landingPage/lib/inc/signup.inc.php" method="POST">
+                            <form action="../tugas-lab-pw/lib/inc/signup.inc.php" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input type="text" name="first_name" id="first" placeholder="First Name"
-                                            class="form-control">
+                                        <input type="text" name="first_name" id="first" placeholder="First Name" class="form-control">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="text" name="last_name" id="last" placeholder="Last Name"
-                                            class="form-control">
+                                        <input type="text" name="last_name" id="last" placeholder="Last Name" class="form-control">
                                     </div>
                                 </div>
-                                <input type="text" name="username" id="username" placeholder="Username"
-                                    class="form-control">
+                                <input type="text" name="username" id="username" placeholder="Username" class="form-control">
                                 <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
-                                <input type="password" name="password" id="password" placeholder="Password"
-                                    class="form-control">
-                                <input type="password" name="password_repeat" id="password-repeat"
-                                    placeholder="Repeat Password" class="form-control">
+                                <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                                <input type="password" name="password_repeat" id="password-repeat" placeholder="Repeat Password" class="form-control">
                                 <button type="submit" name="signup_submit" id="sign-up" class="btn mt-2">Sign Up</button>
                                 <hr>
                                 <a href="login.php" id="login" class="btn">Login</a>

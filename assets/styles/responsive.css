@@ -1,94 +1,139 @@
 /* Media Queries */
+@media screen and (min-width: 1200px) {
+	/* Features Section */
+	#features {
+		margin-top: 5rem;
+	}
+}
+
 @media (max-width: 992px) {
+	/* navbar section */
+	.navbar {
+		background: rgba(1, 18, 70, 0.7);
+		padding-left: 1rem;
+		padding: 1rem;
+	}
 
-    /* navbar section */
-    .navbar {
-        background: rgba(1, 18, 70, .7);
-        padding-left: 1rem;
-        padding: .7rem;
-    }
+	.collapse {
+		margin-left: 0;
+		margin-top: 1.5rem;
+		display: block;
+	}
 
-    #login {
-        width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+	#login {
+		width: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
 
-    #sign-up {
-        width: 100%;
-    }
+	#sign-up {
+		width: 100%;
+	}
 
-    #login-alert .card {
-        top: 3rem;
-        width: 140%;
-    }
+	#login-alert .card {
+		top: 3rem;
+		width: 140%;
+	}
 
-    form #logout {
-        width: 100%;
-        margin-top: 1rem;
-    }
+	form #logout {
+		width: 100%;
+		margin-top: 1rem;
+	}
 
-    /* Hero section */
-    #hero .text {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
+	/* Hero section */
+	.hero-text {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 
-    .image-box {
-        display: none;
-    }
+	.image-box {
+		display: none;
+	}
+
+	/* Pricing sectoin */
+	#pricing .cards .row {
+		gap: 2rem;
+	}
+
+	#footer {
+		padding: 3rem 2rem;
+	}
+
+	.footer-img {
+		margin-bottom: 2rem;
+	}
+
+	.footer-menu {
+		margin-bottom: 2rem;
+	}
 }
 
 @media (max-width: 800px) {
-    .text h1 {
-        width: 85%;
-    }
-    /* pricing section */
-    .card {
-        width: 100%;
-        margin-bottom: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	h1 {
+		font-size: 2.5rem;
+	}
 
-    .card-body {
-        padding: auto .5rem;
-    }
+	h2 {
+		font-size: 2rem;
+	}
 
-    #login-card .card {
-        width: 60%;
-    }
+	p {
+		font-size: 0.9rem;
+	}
 
-    #signup-form {
-        margin-bottom: 5rem;
-    }
+	/* pricing section */
+	.card {
+		width: 100%;
+		margin-bottom: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    #signup-card .card {
-        width: 60%;
-    }
+	.card-body {
+		padding: auto 0.5rem;
+	}
+
+	#login-card .card {
+		width: 60%;
+	}
+
+	#signup-form {
+		margin-bottom: 5rem;
+	}
+
+	#signup-card .card {
+		width: 60%;
+	}
 }
 
 @media (max-width: 540px) {
-    /* Hero Section */
-    .text h1 {
-        font-size: 3rem;
-    }
+	h1 {
+		font-size: 2rem;
+	}
 
-    #login-card .card {
-        width: 100%;
-    }
+	section {
+		padding: 0 1rem;
+	}
 
-    #signup-form {
-        margin-bottom: 2rem;
-    }
+	.list ul li {
+		font-size: 0.8rem;
+	}
 
-    #signup-card .card {
-        width: 100%;
-    }
+	#login-card .card {
+		width: 100%;
+	}
+
+	#signup-form {
+		margin-bottom: 2rem;
+	}
+
+	#signup-card .card {
+		width: 100%;
+	}
 }
 
-@media (max-width: 380px){
-    #pricing .list p:nth-child(1) {
-        font-size: 1.7rem;
-    }
+@media (max-width: 380px) {
+	#pricing .list p:nth-child(1) {
+		font-size: 1.7rem;
+	}
 }

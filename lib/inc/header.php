@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -11,9 +11,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Factory</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/responsive.css">
+
+
 </head>
 
 <body>
@@ -21,19 +23,17 @@ session_start();
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
+                <a href="index.php"><img src="./assets/images/logowf-2.png" class="img-box " alt="Website Factory Logo"></a>
 
-                <button class="navbar-toggler navbar-dark border-light" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                    aria-label="Toggle navigation">
+
+                <button class="navbar-toggler navbar-dark border-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div>
-                    <a href="index.php#hero"><img src="./assets/images/image.png" class="img-box" alt="brand"></a>
-                </div>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.php#hero">Home</a>
                         </li>
@@ -47,23 +47,23 @@ session_start();
                             <a class="nav-link" href="contact.php">Contact Us</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav login-signup">
+                        <?php
 
-                    <?php
-                    
+                        if (isset($_SESSION['userId'])) {
+                            echo '<li>
+                            <form action="../tugas-lab-pw/lib/inc/logout.inc.php" method="POST">
+                                <button type="submit" name="logout_submit" id="logout" class="btn">Log Out</button>
+                            </form>
+                            </li>';
+                        } else {
+                            echo '<li class="nav-item text-center"><a href="login.php" class="nav-link">Login</button></a></li>
+                                <li><a href="signup.php" class="btn" id="sign-up">Sign Up</button></a></li>';
+                        }
 
-                    if (isset($_SESSION['userId'])) {
-                        echo '<form action="../landingPage/lib/inc/logout.inc.php" method="POST">
-                        <button type="submit" name="logout_submit" id="logout" class="btn">Log Out</button>
-                        </form>';
-                    } else {
-                        echo '<a href="login.php" class="btn" id="login">Login</button></a>
-                        <a href="signup.php" class="btn" id="sign-up">Sign Up</button></a>';
-                    }
-
-                    ?>
-
-
-
+                        ?>
+                    </ul>
                 </div>
+            </div>
         </nav>
     </header>

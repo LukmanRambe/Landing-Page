@@ -3,6 +3,4 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: /landingPage/index.php?logout=success");
-
-?>
+header("location: /tugas-lab-pw/index.php?logout=success");

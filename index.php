@@ -1,32 +1,17 @@
 <?php include "./lib/inc/header.php" ?>
+<?php require_once './lib/inc/reviews.inc.php';  ?>
 
 <main>
 
     <!-- Hero Section -->
     <section href="hero" id="hero">
 
-        <!-- Login Status -->
-
-        <div id="login-alert" class="container col-lg-6 col-md-12 login-alert">
-            <div class="container card">
-                <?php 
-                
-                if (isset($_GET['login']) == "success") {
-                    echo '<p class="login-status-text text-center justify-content-center">You are logged in!</p>';
-                } else if (isset($_GET['logout']) == "success") {
-                    echo ' <p class="login-status-text text-center justify-content-center">You are logged out!</p>';
-                }
-
-                ?>
-            </div>
-        </div>
-
         <div class="container">
 
             <div class="row">
 
                 <div class="col-lg-6 col-md-9">
-                    <div class="text">
+                    <div class="hero-text">
                         <h1>the best web creation service</h1>
                         <p>We Provide Professional Web Company Profile, Online Shop, Landing Page, Travel Web and Dealer
                             Web.
@@ -49,14 +34,12 @@
     <!-- Features Section -->
     <section href="#features" id="features">
 
-        <div class="container justify-content-center mt-5">
-            <div class="feature-title">
-                <h2>Features</h2>
-            </div>
+        <div class="section-title text-center mt-3">
+            <h2>Features</h2>
         </div>
 
         <div class="container">
-            <div class="row justify-content-center text-center mt-5">
+            <div class="row justify-content-center mt-5">
 
                 <div class="col-md-4 col-sm-12 feature-block">
                     <i class="fas fa-globe"></i>
@@ -73,7 +56,7 @@
 
                 <div class="col-md-4 col-sm-12 feature-block">
                     <i class="fas fa-credit-card"></i>
-                    <h4>Ready E-commerce</h4>
+                    <h4>E-commerce Ready</h4>
                     <p>In addition to our company profile, we can also design online store websites or what is
                         commonly
                         called e-commerce.</p>
@@ -105,34 +88,36 @@
     <!-- Pricing Section -->
     <section href="#pricing" id="pricing">
 
-        <div class="container justify-content-center mb-5">
-            <div class="pricing-title">
-                <h2>Pricing</h2>
-            </div>
+        <div class="section-title text-center">
+            <h2>Pricing</h2>
         </div>
 
-        <div class="container justify-content-center text-center">
+        <div class="container justify-content-center text-center cards">
 
-            <div class="row">
+            <div class="row ">
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-body">
-                            <i class="fas fa-globe"></i>
-                            <h4 class="card-title mb-3">Basic</h4>
+                            <div class="card-heading">
+                                <i class="fas fa-globe"></i>
+                                <h4 class="card-title">Basic</h4>
+                                <p class="price">Rp 3.000.000</p>
+                            </div>
                             <div class="list">
-                                <p>Rp 3.000.000</p>
-                                <p>Gratis Domain .com</p>
-                                <p>Web Space 500 MB</p>
-                                <p>Unlimited Bandwith</p>
-                                <p>4 Page</p>
-                                <p>Revisi Desain &amp; Konten 1 Kali</p>
-                                <p>Mobile Responsif</p>
-                                <p>Contact Form</p>
-                                <p>SEO Friendly</p>
-                                <p>Optimasi Loading SpeedWebsite</p>
-                                <p>Perpanjangan Tahun Berikutnya Rp. 1.000.000</p>
-                                <p>Support by email &amp; call/WA</p>
-                                <p>Free Konsultasi</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Gratis Domain .com</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Web Space 500 MB</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Unlimited Bandwith</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>4 Page</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Revisi Desain &amp; Konten 1 Kali</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Mobile Responsif</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Contact Form</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>SEO Friendly</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Optimasi Loading SpeedWebsite</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Perpanjangan Tahun Berikutnya Rp. 1.000.000</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Support by email &amp; call/WA</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Free Konsultasi</li>
+                                </ul>
                             </div>
                             <a href="https://wa.me/6265402519" class="btn">Contact Us</button></a>
                         </div>
@@ -140,27 +125,31 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card premium">
+                    <div class="card shadow premium ">
                         <div class="card-header">Popular</div>
                         <div class="card-body">
-                            <i class="fas fa-gem"></i>
-                            <h4 class="card-title mb-3">Premium</h4>
+                            <div class="card-heading">
+                                <i class="fas fa-gem"></i>
+                                <h4 class="card-title">Premium</h4>
+                                <p class="price">Rp 6.000.000</p>
+                            </div>
                             <div class="list">
-                                <p>Rp 6.000.000</p>
-                                <p>Gratis Domain .com</p>
-                                <p>Unlimited Web Space</p>
-                                <p>Unlimited Bandwith</p>
-                                <p>10 Page</p>
-                                <p>Revisi Desain &amp; Konten 2 Kali</p>
-                                <p>Mobile Responsif</p>
-                                <p>Contact Form</p>
-                                <p>SEO Friendly</p>
-                                <p>Optimasi SEO Off &amp; On Page</p>
-                                <p>Optimasi Loading Speed Website</p>
-                                <p>Perpanjangan Tahun Berikutnya Rp. 1.750.000</p>
-                                <p>Sosial Media Icon</p>
-                                <p>Support by email &amp; call/WA</p>
-                                <p>Free Konsultasi</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Gratis Domain .com</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Unlimited Web Space</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Unlimited Bandwith</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>10 Page</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Revisi Desain &amp; Konten 2 Kali</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Mobile Responsif</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Contact Form</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>SEO Friendly</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Optimasi SEO Off &amp; On Page</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Optimasi Loading Speed Website</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Perpanjangan Tahun Berikutnya Rp. 1.750.000</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Sosial Media Icon</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Support by email &amp; call/WA</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Free Konsultasi</li>
+                                </ul>
                             </div>
                             <a href="https://wa.me/6265402519" class="btn">Contact Us</button></a>
                         </div>
@@ -168,24 +157,28 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-body">
-                            <i class="fas fa-trophy"></i>
-                            <h4 class="card-title mb-3">Pro</h4>
+                            <div class="card-heading">
+                                <i class="fas fa-trophy"></i>
+                                <h4 class="card-title">Pro</h4>
+                                <p class="price">Rp 4.000.000</p>
+                            </div>
                             <div class="list">
-                                <p>Rp 4.000.000</p>
-                                <p>Gratis Domain .com</p>
-                                <p>Unlimited Web Space</p>
-                                <p>Unlimited Bandwith</p>
-                                <p>6 Page</p>
-                                <p>Revisi Desain &amp; Konten1Kali</p>
-                                <p>Mobile Responsif</p>
-                                <p>Contact Form</p>
-                                <p>SEO Friendly</p>
-                                <p>Optimasi Loading Speed Website</p>
-                                <p>Perpanjangan Tahun Berikutnya Rp. 1.500.000</p>
-                                <p>Support by email &amp; call/WA</p>
-                                <p>Free Konsultasi</p>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Gratis Domain .com</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Unlimited Web Space</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Unlimited Bandwith</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>6 Page</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Revisi Desain &amp; Konten1Kali</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Mobile Responsif</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Contact Form</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>SEO Friendly</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Optimasi Loading Speed Website</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Perpanjangan Tahun Berikutnya Rp. 1.500.000</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Support by email &amp; call/WA</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Free Konsultasi</li>
+                                </ul>
                             </div>
                             <a href="https://wa.me/6265402519" class="btn">Contact Us</button></a>
                         </div>
@@ -195,6 +188,38 @@
 
         </div>
 
+    </section>
+
+    <section id="reviews">
+        <div class="section-title text-center">
+            <h2>Reviews</h2>
+        </div>
+
+        <div id="carouselExampleControls" class="carousel slide shadow container" data-ride="carousel">
+            <div class="carousel-inner text-center">
+                <?php $count = 0; ?>
+                <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                    <div class="carousel-item <?= $count == 0 ? 'active' : ''; ?>">
+                        <img src="./assets/images/<?= $row['profile_picture']; ?>" class="mx-auto d-block">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $row['username']; ?></h5>
+                            <p class="card-text"><?= $row['review']; ?></p>
+                        </div>
+                    </div>
+                    <?php $count += 1 ?>
+                <?php endwhile; ?>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </section>
 
 </main>
